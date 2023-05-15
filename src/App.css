@@ -55,9 +55,32 @@ li a:hover {
     overflow: hidden;
 }
 
+.container-picture {
+    position: relative;
+}
+
 .person-picture {
     max-width: 15.625rem;
     height: auto;
     border-radius: 8px;
     background-color: black;
+}
+
+.button-remove {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: black;
+    background-color: grey;
+    border-radius: 3px;
+    display: none;
+}
+
+.button-remove:hover {
+    color: white;
+    background-color: red;
+}
+
+.visible {
+    display: block;
 }
