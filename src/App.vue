@@ -1,15 +1,15 @@
 <script>
 import { RouterLink, RouterView } from 'vue-router'
 import { ref } from 'vue';
-import './App.css'
+import './assets/App.css'
 
 export default {
   setup() {
 
     const fileInput = ref(null)
     let image = ref(null)
-    let showElement = ref(true)
-    let showButton = ref(false)
+    let showAddButton = ref(true)
+    let showRemoveButton = ref(false)
 
     const triggerFileInput = () => {
       fileInput.value.click()
@@ -20,26 +20,38 @@ export default {
       if (file) {
         const reader = new FileReader()
         reader.onload = (e) => {
-          image.value = e.target.result
+          const imageData = e.target.result
+          localStorage.setItem('image', imageData)
+          image.value = imageData
         }
         reader.readAsDataURL(file)
-        showElement.value = false
+        showAddButton.value = false
+      }
+    }
+
+    const loadImage = () => {
+      const storedImage = localStorage.getItem('image')
+      image.value = storedImage
+      if (storedImage) {
+        showAddButton.value = false
       }
     }
 
     const removeImage = () => {
       image.value = null
-      showElement.value = true
-      hideButtonHandler
+      showAddButton.value = true
+      hideButtonHandler()
     }
 
     const showButtonHandler = () => {
-      showButton.value = true
+      showRemoveButton.value = true
     }
 
     const hideButtonHandler = () => {
-      showButton.value = false
+      showRemoveButton.value = false
     }
+
+    loadImage()
 
 
     return {
@@ -47,8 +59,8 @@ export default {
       RouterView,
       fileInput,
       image,
-      showElement,
-      showButton,
+      showElement: showAddButton,
+      showButton: showRemoveButton,
       triggerFileInput,
       handleFileInput,
       removeImage,

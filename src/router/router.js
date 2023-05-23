@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import homeComp from '../components/homeComp.vue'
-import infoComp from '../components/infoComp.vue'
 import skillsComp from '../components/skillsComp.vue'
 import experienceComp from '../components/experienceComp.vue'
 import educationComp from '../components/educationComp.vue'
@@ -12,11 +11,6 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: homeComp
-    },
-    {
-      path: '/info',
-      name: 'info',
-      component: infoComp
     },
     {
       path: '/skills',

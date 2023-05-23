@@ -1,5 +1,13 @@
+html {
+    margin: 0;
+}
+
 body {
     margin: 0;
+}
+
+nav {
+    position: absolute;
 }
 
 ul {
@@ -24,7 +32,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #8EA69B;
+    background-color: #8ea4a6;
     color: white;
 }
 
@@ -34,12 +42,18 @@ li a:hover {
     height: 100vh;
 }
 
+.container-subsite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 1rem 0 1rem
+}
+
 .block-left {
     width: 50vw;
     max-height: 100vh;
-    border-style: solid;
-    border-width: 5px 2.5px 5px 5px;
-    border-color: black;
 }
 
 .block-right {
@@ -48,10 +62,7 @@ li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-style: solid;
-    border-width: 5px 5px 5px 2.5px;
-    border-color: black;
-    background-color: #8EA69B;
+    background-color: #8ea4a6;
     overflow: hidden;
 }
 
@@ -62,6 +73,7 @@ li a:hover {
 .person-picture {
     max-width: 15.625rem;
     height: auto;
+    border: solid;
     border-radius: 8px;
     background-color: black;
 }
@@ -82,5 +94,43 @@ li a:hover {
 }
 
 .visible {
+    display: block;
+}
+
+.title {
+    font-size: 3rem;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.create-card {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    padding: 2rem;
+}
+
+.form-row {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+label {
     display: block;
 }
