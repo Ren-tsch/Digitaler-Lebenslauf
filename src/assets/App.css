@@ -8,17 +8,21 @@ body {
 
 nav {
     position: absolute;
+    height: auto;
+    width: 50vw;
+    max-width: 50vw;
 }
 
-ul {
+.navbar {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: white;
+    background-color: #8ea4a638;
+    border-bottom: 5px solid cadetblue;
 }
 
-li {
+.nav-link {
     float: left;
 }
 
@@ -34,6 +38,11 @@ li a {
 li a:hover {
     background-color: #8ea4a6;
     color: white;
+}
+
+label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:small;
 }
 
 .container {
@@ -53,17 +62,18 @@ li a:hover {
 
 .block-left {
     width: 50vw;
+    max-width: 50vw;
     max-height: 100vh;
 }
 
 .block-right {
     width: 50vw;
+    max-width: 50vw;
     max-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #8ea4a6;
-    overflow: hidden;
 }
 
 .container-picture {
@@ -133,4 +143,34 @@ li a:hover {
 
 label {
     display: block;
+}
+
+.skill-container {
+    margin-top: 7.5vh;
+}
+
+.skill-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.add-button {
+    display: inline-block;
+    position: relative;
+    top: 16px;
+    max-height: 21px;
+}
+
+.skill-title {
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 0;
+}
+
+.skill-content {
+    margin-top: 0.5rem;
+    margin-right: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
 }

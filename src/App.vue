@@ -76,12 +76,11 @@ export default {
   <div class="container">
     <div class="block-left">
       <nav>
-        <ul>
-          <li><RouterLink to="/">Home</RouterLink></li>
-          <li><RouterLink to="/info">Info</RouterLink></li>
-          <li><RouterLink to="/skills">Fachkenntnisse</RouterLink></li>
-          <li><RouterLink to="/experience">Erfahrung</RouterLink></li>
-          <li><RouterLink to="/education">Ausbildung</RouterLink></li>
+        <ul class="navbar">
+          <li class="nav-link"><RouterLink to="/">Home</RouterLink></li>
+          <li class="nav-link"><RouterLink to="/skills">Fachkenntnisse</RouterLink></li>
+          <li class="nav-link"><RouterLink to="/experience">Erfahrung</RouterLink></li>
+          <li class="nav-link"><RouterLink to="/education">Ausbildung</RouterLink></li>
         </ul>
       </nav>
       <RouterView></RouterView>
