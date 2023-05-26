@@ -145,7 +145,7 @@ label {
     display: block;
 }
 
-.skill-container {
+.nav-top-margin {
     margin-top: 7.5vh;
 }
 
@@ -173,4 +173,98 @@ label {
     margin-right: 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: smaller;
+}
+
+.container-exp {
+    display: flex;
+    margin: 0 0 0 1rem;
+    height: 27.5vh;
+}
+
+.exp-card {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: flex-start;
+}
+
+.exp-taskslist {
+    margin-left: 1rem;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+    overflow: scroll;
+    width: 100%;
+}
+
+.exp-taskslist::-webkit-scrollbar-thumb {
+    background-color: cadetblue;
+}
+
+.exp-taskslist::-webkit-scrollbar {
+    width: 8px;
+}
+
+.exp-cardbox {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    height: 65vh;
+    width: 50vw;
+    max-width: 50vw;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.exp-cardbox::-webkit-scrollbar-thumb {
+    background-color: cadetblue;
+}
+
+.exp-cardbox::-webkit-scrollbar {
+    width: 8px;
+}
+
+.exp-cardcontent {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: fit-content;
+    width: 45vw;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+    background-color: #8ea4a6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.exp-cardcontent-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    white-space: normal;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    padding-left: 0.5rem;
+}
+
+.exp-cardcontent-right {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 1rem 1rem 1rem 1rem;
+    white-space: normal;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /*background: linear-gradient(to right, #3CB371, white);*/
+    background-color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+.exp-cardcontent-right p {
+    white-space: normal;
+    margin: 0;
 }

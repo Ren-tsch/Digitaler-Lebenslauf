@@ -47,6 +47,7 @@ export default {
             })
 
             localStorage.setItem('skills', JSON.stringify(skillsArray))
+            localStorage.removeItem('adjustSkillData')
 
             newSkill.title = ''
             newSkill.content = ''
@@ -55,8 +56,10 @@ export default {
         }
 
         function finishSkills() {
-            isFinished.value = true
-            updateSkillPageState()
+            if (localStorage.getItem('skills') != null) {
+                isFinished.value = true
+                updateSkillPageState()
+            }
         }
 
         function showButtonHandler() {
@@ -73,7 +76,7 @@ export default {
         }
 
         function loadPageState() {
-            isFinished.value = localStorage.getItem('skillPageState')
+            isFinished.value = JSON.parse(localStorage.getItem('skillPageState'))
         }
 
         function updateSkillPageState() {
@@ -106,16 +109,16 @@ export default {
 </script>
 
 <template>
-    <div class="skill-container" v-if="!isFinished">
+    <div class="nav-top-margin" v-if="!isFinished">
         <form class="skill-form" @submit.prevent="addNewSkill">
             <div>
                 <label>Fähigkeitsgebiet:</label>
-                <input v-model="newSkill.title" type="text">
+                <input v-model="newSkill.title" type="text" required>
             </div>
 
             <div>
                 <label>Beschreibung der Skills:</label>
-                <input v-model="newSkill.content" class="input-textarea">
+                <input v-model="newSkill.content" type="text" required>
             </div>
 
             <div class="add-button">
