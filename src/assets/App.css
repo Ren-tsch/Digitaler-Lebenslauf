@@ -40,6 +40,11 @@ li a:hover {
     color: white;
 }
 
+.active {
+    background-color: #8ea4a6;
+    color: white;
+}
+
 label {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size:small;
@@ -259,7 +264,6 @@ label {
     padding: 1rem 1rem 1rem 1rem;
     white-space: normal;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    /*background: linear-gradient(to right, #3CB371, white);*/
     background-color: white;
     border-radius: 0 5px 5px 0;
 }
@@ -267,4 +271,8 @@ label {
 .exp-cardcontent-right p {
     white-space: normal;
     margin: 0;
+}
+
+.green-background {
+    background-color: #90a68e;
 }

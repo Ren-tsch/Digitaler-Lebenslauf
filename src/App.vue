@@ -77,10 +77,10 @@ export default {
     <div class="block-left">
       <nav>
         <ul class="navbar">
-          <li class="nav-link"><RouterLink to="/">Home</RouterLink></li>
-          <li class="nav-link"><RouterLink to="/skills">Fachkenntnisse</RouterLink></li>
-          <li class="nav-link"><RouterLink to="/experience">Erfahrung</RouterLink></li>
-          <li class="nav-link"><RouterLink to="/education">Ausbildung</RouterLink></li>
+          <li class="nav-link" :class="{ active: $route.path === '/' }"><RouterLink to="/">Home</RouterLink></li>
+          <li class="nav-link" :class="{ active: $route.path === '/skills' }"><RouterLink to="/skills">Fachkenntnisse</RouterLink></li>
+          <li class="nav-link" :class="{ active: $route.path === '/experience' }"><RouterLink to="/experience">Erfahrung</RouterLink></li>
+          <li class="nav-link" :class="{ active: $route.path === '/education' }"><RouterLink to="/education">Ausbildung</RouterLink></li>
         </ul>
       </nav>
       <RouterView></RouterView>
