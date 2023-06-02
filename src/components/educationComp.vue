@@ -138,7 +138,7 @@ export default {
         }
 
         function finishEdu() {
-            if (localStorage.getItem('educations') && localStorage.getItem('publicServices') != null) {
+            if ((localStorage.getItem('educations') || localStorage.getItem('publicServices')) != null) {
                 isFinished.value = true
                 updateEduPageState()
                 orderCardsByDate()
@@ -168,15 +168,23 @@ export default {
         }
 
         function orderCardsByDate() {
-            const educationArray = JSON.parse(localStorage.getItem('educations'))
-            const publicServicesArray = JSON.parse(localStorage.getItem('publicServices'))
+            let educationArray = []
+            let publicServicesArray = []
 
-            for (let i = 0; i < educationArray.length; i++) {
-                educationArray[i].type = 'education'
+            if (localStorage.getItem('educations') != null) {
+                educationArray = JSON.parse(localStorage.getItem('educations'))
+
+                for (let i = 0; i < educationArray.length; i++) {
+                    educationArray[i].type = 'education'
+                }
             }
 
-            for (let i = 0; i < publicServicesArray.length; i++) {
-                publicServicesArray[i].type = 'publicService'
+            if (localStorage.getItem('publicServices') != null) {
+                publicServicesArray = JSON.parse(localStorage.getItem('publicServices'))
+
+                for (let i = 0; i < publicServicesArray.length; i++) {
+                    publicServicesArray[i].type = 'publicService'
+                }
             }
 
             combinedArray.value = educationArray.concat(publicServicesArray)
