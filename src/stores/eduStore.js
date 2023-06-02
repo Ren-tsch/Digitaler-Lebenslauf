@@ -91,7 +91,7 @@ export default function useEduStore() {
         const index = stateTwo.publicServices.findIndex(obj => obj.id === position)
         stateTwo.publicServices.splice(index, 1)
         if (stateTwo.publicServices.length > 0) {
-            localStorage.setItem('publicServices', JSON.stringify(state.educations))
+            localStorage.setItem('publicServices', JSON.stringify(stateTwo.publicServices))
         }
     }
 

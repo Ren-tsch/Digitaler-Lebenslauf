@@ -102,7 +102,7 @@ export default {
             }
 
             changePublicService.value = false
-            loadEducation()
+            loadPublicService()
         }
 
         function adjustNewPublicService(position) {
